@@ -1,4 +1,5 @@
-# Speechbrain-MOABB-EEG-Processing
+# EEG-Based Motor Imagery Decoding with Deep Learning
+Last updated: April 20th, 2024
 
 ## **Introduction**
 
@@ -6,7 +7,7 @@ The goal of this project is to find effective and efficient machine learning mod
 
 
 ## **Abstract**
-   This research aims to find machine learning models tasked to decode EEG motor imagery data with more accuracy than the provided benchmarks of existing EEGNet models in SpeechBrain-MOAB's library for the BNCI2014_001 dataset. The main methods used were (1) preprocessing data into three sets; a trainng set, a validation set, and a test set, (2) defining the model, (3) finding optimal hyperparameters, (4) training the model, and (5) running the model on the entire dataset to determine new model accuracy benchmarks. In the end, the model with the best performance, though only  marginally better than the original EEGNet benchmarks (+1%) was `CustomModel3`, which implemented depthwise separable 2D convolutions instead of the standard 2D convolutional layers. Upon comparing all the custom models created, it was determined that simpler architectures outperformed more complex architectures when benchmarking the different models. No conclusions could be drawn as to whether `CustomModel3` was indeed better than `EEGNet` as further experimentation is required.
+   This research aims to find machine learning models tasked to decode EEG motor imagery data with more accuracy than the provided benchmarks of [existing EEGNet models](https://github.com/speechbrain/benchmarks/blob/main/benchmarks/MOABB/models/EEGNet.py) in SpeechBrain-MOAB's library for the [BNCI2014_001](https://neurotechx.github.io/moabb/generated/moabb.datasets.BNCI2014_001.html#moabb.datasets.BNCI2014_001) dataset. The main methods used were (1) preprocessing data into three sets; a trainng set, a validation set, and a test set, (2) defining the model, (3) finding optimal hyperparameters, (4) training the model, and (5) running the model on the entire dataset to determine new model accuracy benchmarks. In the end, the model with the best performance, though only  marginally better than the [original EEGNet benchmarks](https://github.com/speechbrain/benchmarks/tree/main/benchmarks/MOABB#-results) (+1%) was `CustomModel3`, which implemented depthwise separable 2D convolutions instead of the standard 2D convolutional layers. Upon comparing all the custom models created, it was determined that simpler architectures outperformed more complex architectures when benchmarking the different models. No conclusions could be drawn as to whether `CustomModel3` was indeed better than `EEGNet` as further experimentation is required.
 
 ## Architecture Diagrams
 ### EEGNet
